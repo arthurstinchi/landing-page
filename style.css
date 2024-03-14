@@ -28,6 +28,8 @@
     --corfonte1: #FFF2E7;
     --corfonte2: #C7BAB3;
     --corfonte3: #A45A49;
+    --corfonte4: #E7A80E;
+    --corfonte5: #756A67;
 
     --font0: "Epilogue", sans-serif;
     --font1: "Montserrat", sans-serif;
@@ -35,44 +37,47 @@
     --font3: "Teko", sans-serif;
 }
 
+html {
+    font-family: var(--font2);
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--cor3);
+    color: var(--corfonte1);
+}
+
 a {
     text-decoration: none;
     color: var(--corfonte1);
 }
 
-body {
-    background-color: var(--cor4);
-    color: var(--corfonte1);
-    font-family: var(--font2);
-}
-
 ul {
-    list-style-type: none;
+    list-style: none;
 }
 
 .destaque {
-    color: var(--corfonte3);
     font-family: var(--font0);
-    font-size: 14px;
-    font-weight: 500;
     text-transform: uppercase;
+    font-size: 1rem;
 }
 
-.subti {
-    color: var(--corfonte2);
-    font-size: 20px;
-    font-weight: 400;
+.marrom {
+    color: var(--corfonte3);
+}
+
+.amarelo {
+    color: var(--corfonte4);
+}
+
+h1 {
+    color: white;
+    font-family: var(--font1);
+    font-size: 3.5rem;
+    font-weight: 800;
 }
 
 /* ESTILO DO HEADER */
-
-header {
-    background-color: var(--cor3);
-    max-width: 1280px;
-    display: flex;
-    padding: 24px 160px;
-    align-items: center;
-}
 
 nav {
     max-width: 1120px;
@@ -85,154 +90,205 @@ nav {
     align-items: center;
 }
 
+.logo {
+    font-family: var(--font3);
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
 
-header ul  {
+.menu {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 
-header ul li a {
+.menu li a {
     opacity: 50%;
-    transition: .2s;
 }
 
-header ul li a:hover {
+.menu li a:hover {
     opacity: 100%;
-}
-
-.Logo {
-    text-transform: uppercase;
-    color: white;
-    font-size: 32px;
-    font-weight: 600;
 }
 
 .github {
     font-weight: 600;
 }
 
-/* ESTILO HERO */
+/* ESTILO MAIN */
 
+main {
+    display: flex;
+    flex-direction: column;
+}
 
-.background { 
+.principal {
     background-color: var(--cor4);
-    height: 386px;
 }
 
 .hero {
-    max-width: 1280px;
+    max-width: 1120px;
     height: 60vh;
-    padding: 64px 160px;
-    display: flex;
-    justify-content: space-between;
-    gap: 6rem;
-    overflow: clip;
-}
 
-.hero .titulo-hero {
-    color: white;
-    font-size: 50px;
-    font-weight: bolder;
-    font-family: var(--font1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+    
+    padding: 0rem 2rem;
+    margin: auto;
+
+    overflow: clip;
 }
 
 hr {
     border-color: var(--corfonte3);
-    width: 248px;
-    height: 2px;
 }
 
-span {
-    display: block;
+.hero-subtitulo {
+    color: var(--corfonte2);
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
-.img-hero {
+.hero-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-img-conteiner {
     max-width: 45%;
     column-count: 4;
-    column-gap: 16px;
+    column-gap: 1rem;
     margin: -1rem;
 }
 
-.img-hero > figure > img {
+.hero-img-conteiner > figure > img {
     width: 100%;
+    border-radius: 0.5rem;
 }
 
-.bnt-hero {
-    margin: -110px 0;
+.btn-conteiner {
+    width: 100%;
+    max-width: 1120px;
+    margin: auto;
+    transform: translate("0, -50%");
 }
 
-.bnt-hero i {
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+
     background-color: var(--corfonte3);
-    display: flex;
-    width: 56px;
-    height: 56px;
-    border-radius: 20px;
-    justify-content: center;    
-    align-items: center;
-    margin: 20px 0;
-    cursor: pointer;
-}
-
-.txt-hero {
-    display: flex;
-    gap: 23px;
-    flex-direction: column;
+    color: white;
 }
 
 /* ESTILO RECEITAS */
 
-section.receita {
-    padding: 64px 160px;
-    background-color: var(--cor3);
-}
-
-.coment-subti {
-    color: var(--corfonte1);
-    font-family: var(--font1);
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.hat {
+.receitas {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin: 140px 0px 32px 10px;
+
+    max-width: 1120px;
+    padding: 3rem 2rem;
+    margin: auto;
 }
 
-.coment {
-    margin: 20px 0;
+.header-receitas {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-.avaliacao {
+.receitas-titulos {
+    font-family: var(--font1);
+    font-size: 2rem;
+    font-weight: 700px;
+}
+
+.receitas-subtitulos {
+    color: var(--corfonte2);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.receitas-card-conteiner {
+    padding: 0rem 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.receitas-card {
     background-color: var(--cor2);
-    width: 560px;
-    height: 186px;
-    gap: 32px;
+    padding: 2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-basis: 29rem;
+    margin-top: 2rem;
 }
 
-.coteiner {
-    column-count: 2;
-    gap: 10px;
+.receitas-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.receitas-card-header-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.receita-titulo {
+    font-family: var(--font1);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.receitas-avaliacao {
+    color: var(--corfonte5);
+    font-size: 1rem;
+}
+
+.receita-descricao {
+    color: var(--corfonte2);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.receita-autor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.receita-autor-nome {
+    color: var(--corfonte2);
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 /* ESTILO FOOTER */
 
-.rodape {
-    background-color: var(--cor1);
+footer {
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0;
-    font-size: 14px;
-    line-height: 25px;
+    gap: .5rem;
+    background-color: var(--cor1);
 }
 
-.rodape .opacity {
+.footer-autor {
     opacity: 50%;
-}
-
-.rodape .opacity a {
-    text-decoration: underline;
 }
